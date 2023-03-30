@@ -1,7 +1,6 @@
 # getpages.py
 
-A small python script that fetches all GitHub pages urls deployed by a given user. Powered by the GitHub REST API.  
+A small python script that fetches all GitHub pages urls deployed by a given user. Powered by the GitHub REST API. Also includes a simple example API server that uses the script. 
 
 ## Usage
-   - add `APIKey=[token]` to .env file
-   - run `python getpages.py [USER]`
+Import getpages.py and use function: `get_pages([github username], [github api token])`.

@@ -1,7 +1,4 @@
 import requests
-import os
-from dotenv import load_dotenv, find_dotenv
-import sys
 
 def get_pages(name, token):
 
@@ -22,10 +19,3 @@ def get_pages(name, token):
             print(res.json()['html_url'])
             arr.append(res.json()['html_url'])
     return arr
-
-if len(sys.argv) == 1:
-    print('github username required')
-    exit()
-
-load_dotenv(find_dotenv())
-get_pages(sys.argv[1], os.getenv('APIKey'))
